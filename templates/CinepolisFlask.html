@@ -1,0 +1,75 @@
+{% extends 'CinepolisFlaskLayout.html' %}
+{%block content%}
+
+<br>
+<h1 style="color:#53648c; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 🎟️Venta de
+    boletos🎟️
+</h1>
+<hr>
+<div class="container">
+    <center>
+        <div class="card" style="width: 38rem;">
+            <div class="card-header">
+                <h3>Entradas</h3>
+            </div>
+            <div class="card-body">
+
+                <form class="form-horizontal" name="form1" action="/resultado" method="post">
+                    <div style=" align-content: justify;">
+                        <div class="control-group">
+                            <label for="txtNom" class="control-label">
+                                <b>Nombre:</b>
+                            </label>
+                            <div class="controlsName">
+                                <input type="text" name="txtNom" placeholder="Nombre" value="">
+                            </div>
+                            <br>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="txtCantComp" class="control-label">
+                                <b>Cantidad Compradores:</b>
+                            </label>
+                            <div class="cantC">
+                                <input type="text" name="txtCantComp" placeholder="Cantidad de Compradores" value="">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="control-group">
+                            <label for="rbtnTarjetaCL" class="control-label">
+                                <b>Tarjeta Cineco:</b>
+                            </label>
+                            <div class="tarjetasCinecoRbtn">
+                                <fieldset>
+                                    <input type="radio" id="html" name="rbtnTarjetaC" value="Si" checked>
+                                      <label for="html">Si</label><br>
+                                    <input type="radio" id="html" name="rbtnTarjetaC" value="No">
+                                      <label for="html">No</label><br>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="control-group">
+                            <label for="txtCantBoletos" class="control-label">
+                                <b>Cantidad Boletos:</b>
+                            </label>
+                            <div class="cantBol">
+                                <input type="text" name="txtCantBoletos" placeholder="Cantidad de Boletos" value="">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="control-group">
+                            <button type="submit" class="btn btn-default btn-primary">
+                                Procesar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </center>
+    <br><br>
+
+</div>
+{% endblock %}
